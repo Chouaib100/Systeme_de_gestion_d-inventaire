@@ -1,4 +1,10 @@
-int main() 
+#include <iostream>
+#include <cstring>
+#include <vector>
+
+using namespace std;
+
+nt main() 
 {
 
     vector<Produit> Produits;
