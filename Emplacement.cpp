@@ -1,37 +1,30 @@
-class Emplacement {
-private:
-    char* zone;
-    int rangee;
-    int etagere;
+#include "Emplacement.h"
 
-public:
-    Emplacement(const char* z = NULL, int r = -1, int e = -1) {
-        zone = new char[strlen(z) + 1];
-        strcpy(zone, z);
-        rangee = r;
-        etagere = e;
-    }
+using namespace std;
 
-    void afficher_emplacement() const {
-        cout << "Zone: " << zone << " | Rangee: " << rangee << " | Etagere: " << etagere << endl;
-    }
+Emplacement::Emplacement(const string& zone, int rangee, int etagere)
+    : zone(zone), rangee(rangee), etagere(etagere) {}
 
-    char* getzone() const { return zone; }
-    int getrangee() const { return rangee; }
-    int getetagere() const { return etagere; }
+string Emplacement::getZone() const {
+    return zone;
+}
 
-    void setzone(char* z) {
-        if (z == NULL) {
-            delete[] zone;
-            zone = new char[strlen(z) + 1];
-            strcpy(zone, z);
-        }
-        else {
-            zone = new char[strlen(z) + 1];
-            strcpy(zone, z);
-        }
-    }
+void Emplacement::setZone(const string& zone) {
+    this->zone = zone;
+}
 
-    void setrangee(int r) { rangee = r; }
-    void setetagere(int e) { etagere = e; }
-};
+int Emplacement::getRangee() const {
+    return rangee;
+}
+
+void Emplacement::setRangee(int rangee) {
+    this->rangee = rangee;
+}
+
+int Emplacement::getEtagere() const {
+    return etagere;
+}
+
+void Emplacement::setEtagere(int etagere) {
+    this->etagere = etagere;
+}
