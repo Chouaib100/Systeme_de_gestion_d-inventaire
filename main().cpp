@@ -1,14 +1,13 @@
 #include <iostream>
-#include <cstring>
 #include <vector>
+#include "Produit.h"
+#include "executer_menu.h"
 
 using namespace std;
 
-nt main() 
-{
-
+int main() {
     vector<Produit> Produits;
-    
+
     Produits.push_back(Produit(1, "Ordinateur portable", 5000, "Zone A", 1, 20, 2));
     Produits.push_back(Produit(2, "Smartphone", 2000, "Zone B", 2, 30, 3));
     Produits.push_back(Produit(3, "Tablette", 600, "Zone C", 1, 10, 1));
