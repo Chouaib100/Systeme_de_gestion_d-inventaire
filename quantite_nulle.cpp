@@ -1,3 +1,9 @@
+#include "quantite_nulle.h"
+#include <iostream>
+#include "effacer_ecran.h"
+
+using namespace std;
+
 void Afficher_Produit_quantite_nulle(const vector<Produit>& Produits) {
     bool aucun_article_trouve = true;
 
@@ -28,8 +34,7 @@ void Afficher_Produit_quantite_nulle(const vector<Produit>& Produits) {
     if (choix == 'm') {
         effacer_ecran();
         return;
-    }
-    else if (choix == 'q') {
+    } else if (choix == 'q') {
         effacer_ecran();
         cout << "=============================================" << endl;
         cout << "                  Au revoir !" << endl;
