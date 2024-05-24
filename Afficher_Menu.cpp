@@ -1,3 +1,8 @@
+#include "Afficher_menu.h"
+#include <iostream>
+
+using namespace std;
+
 int Afficher_menu() {
     int choix;
     cout << "=============================================" << endl;
