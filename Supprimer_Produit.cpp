@@ -1,10 +1,17 @@
+#include "Supprimer_Produit.h"
+#include <iostream>
+#include "effacer_ecran.h"
+
+using namespace std;
+
 void Supprimer_Produit(vector<Produit>& Produits) {
+    int ref;
+
     effacer_ecran();
     cout << "=============================================" << endl;
     cout << "             Supprimer un Produits !" << endl;
     cout << "=============================================" << endl;
 
-    int ref;
     cout << "Entrez la référence de Produit à supprimer : ";
     cin >> ref;
 
@@ -19,8 +26,7 @@ void Supprimer_Produit(vector<Produit>& Produits) {
     if (index != -1) {
         Produits.erase(Produits.begin() + index);
         cout << "Produit supprimé avec succès !" << endl;
-    }
-    else {
+    } else {
         cout << "Produit non trouvé." << endl;
     }
 
@@ -32,19 +38,16 @@ void Supprimer_Produit(vector<Produit>& Produits) {
         if (choix == 'm') {
             effacer_ecran();
             return;
-        }
-        else if (choix == 'q') {
+        } else if (choix == 'q') {
             effacer_ecran();
             cout << "=============================================" << endl;
             cout << "                  Au revoir !" << endl;
             cout << "=============================================" << endl;
             exit(0);
-        }
-        else if (choix == 'r') {
+        } else if (choix == 'r') {
             effacer_ecran();
             Supprimer_Produit(Produits);
-        }
-        else {
+        } else {
             cout << "Choix invalide. Veuillez entrer 'm', 'q' ou 'r' : ";
         }
     } while (true);
