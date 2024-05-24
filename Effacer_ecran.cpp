@@ -1,7 +1,12 @@
+#include "effacer_ecran.h"
+#include <cstdlib>
+
+using namespace std;
+
 void effacer_ecran() {
-#ifdef _WIN32 
+#ifdef _WIN32
     system("cls");
-#else 
+#else
     system("clear");
 #endif
 }
