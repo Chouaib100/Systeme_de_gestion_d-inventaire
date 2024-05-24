@@ -1,3 +1,9 @@
+#include "Afficher_Produit.h"
+#include <iostream>
+#include "effacer_ecran.h"
+
+using namespace std;
+
 void Afficher_Produit(const vector<Produit>& Produits) {
     char choix;
 
@@ -16,8 +22,7 @@ void Afficher_Produit(const vector<Produit>& Produits) {
         if (choix == 'm') {
             effacer_ecran();
             return;
-        }
-        else if (choix == 'q') {
+        } else if (choix == 'q') {
             effacer_ecran();
             cout << "=============================================" << endl;
             cout << "                  Au revoir !" << endl;
