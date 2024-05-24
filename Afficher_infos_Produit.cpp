@@ -1,10 +1,15 @@
+#include "Afficher_infos_Produit.h"
+#include <iostream>
+#include "effacer_ecran.h"
+
+using namespace std;
+
 void Afficher_informations_Produit(const vector<Produit>& Produits) {
     int ref;
     int choixAttribut;
 
     cout << "Entrez la reference de Produit : ";
     cin >> ref;
-
 
     bool articleTrouve = false;
     for (const auto& article : Produits) {
@@ -25,38 +30,37 @@ void Afficher_informations_Produit(const vector<Produit>& Produits) {
             cin >> choixAttribut;
 
             switch (choixAttribut) {
-            case 1:
-                effacer_ecran();
-                cout << "Designation de Produit : " << article.getrdesignation() << endl;
-                break;
-            case 2:
-                effacer_ecran();
-                cout << "Prix de Produit : " << article.getprix() << " dirhams" << endl;
-                break;
-            case 3:
-                effacer_ecran();
-                cout << "Quantite disponible de Produit : " << article.getquantiteDisponible() << endl;
-                break;
-            case 4:
-                effacer_ecran();
-                cout << "Zone de l'emplacement : " << article.get_emplacement_zone() << endl;
-                break;
-            case 5:
-                effacer_ecran();
-                cout << "Rangee de l'emplacement : " << article.get_emplacement_rangee() << endl;
-                break;
-            case 6:
-                effacer_ecran();
-                cout << "Etagere de l'emplacement : " << article.get_emplacement_etagere() << endl;
-                break;
-            case 7:
-                effacer_ecran();
-                cout << "Operation annulee." << endl;
-                break;
-            default:
-                cout << "Choix invalide." << endl;
+                case 1:
+                    effacer_ecran();
+                    cout << "Designation de Produit : " << article.getrdesignation() << endl;
+                    break;
+                case 2:
+                    effacer_ecran();
+                    cout << "Prix de Produit : " << article.getprix() << " dirhams" << endl;
+                    break;
+                case 3:
+                    effacer_ecran();
+                    cout << "Quantite disponible de Produit : " << article.getquantiteDisponible() << endl;
+                    break;
+                case 4:
+                    effacer_ecran();
+                    cout << "Zone de l'emplacement : " << article.get_emplacement_zone() << endl;
+                    break;
+                case 5:
+                    effacer_ecran();
+                    cout << "Rangee de l'emplacement : " << article.get_emplacement_rangee() << endl;
+                    break;
+                case 6:
+                    effacer_ecran();
+                    cout << "Etagere de l'emplacement : " << article.get_emplacement_etagere() << endl;
+                    break;
+                case 7:
+                    effacer_ecran();
+                    cout << "Operation annulee." << endl;
+                    break;
+                default:
+                    cout << "Choix invalide." << endl;
             }
-
 
             char choix;
             do {
@@ -66,8 +70,7 @@ void Afficher_informations_Produit(const vector<Produit>& Produits) {
                 if (choix == 'm') {
                     effacer_ecran();
                     return;
-                }
-                else if (choix == 'q') {
+                } else if (choix == 'q') {
                     effacer_ecran();
                     cout << "=============================================" << endl;
                     cout << "                  Au revoir !" << endl;
