@@ -1,66 +1,38 @@
+#include "Creer_Produit.h"
+#include <iostream>
+#include "effacer_ecran.h"
+
+using namespace std;
 
 void Creer_Produit(vector<Produit>& Produits) {
-    char choix;
-    do {
-        int ref, prix, quantite, rangee, etagere;
-        char designation[100], zone[100];
-        effacer_ecran();
-        cout << "=============================================" << endl;
-        cout << "               Ajouter Produits" << endl;
-        cout << "=============================================" << endl;
-
-        cout << "Entrez la référence de Produits : ";
-        cin >> ref;
-
-
-        bool referenceExistante = false;
-        for (const auto& article : Produits) {
-            if (article.getreference() == ref) {
-                referenceExistante = true;
-                break;
-            }
-        }
-
-        if (referenceExistante) {
-            cout << "La référence existe déjà. Veuillez en choisir une autre." << endl;
-            cout << "Voulez-vous ajouter un autre Produits ? (o/n) : ";
-            cin >> choix;
-            if (choix != 'o' && choix != 'O') {
-                effacer_ecran();
-                return;
-            }
-            continue;
-        }
-
-        cout << "Entrez la désignation de Produit : ";
-        cin.ignore();
-        cin.getline(designation, 100);
-
-        cout << "Entrez le prix de Produit : ";
-        cin >> prix;
-
-        cout << "Entrez la quantité disponible de Produit : ";
-        cin >> quantite;
-
-        cout << "Entrez la zone de l'emplacement : ";
-        cin.ignore();
-        cin.getline(zone, 100);
-
-        cout << "Entrez la rangée de l'emplacement : ";
-        cin >> rangee;
-
-        cout << "Entrez l'étagère de l'emplacement : ";
-        cin >> etagere;
-
-        Produit nouvel_article(ref, designation, prix, zone, rangee, quantite, etagere);
-
-        Produits.push_back(nouvel_article);
-
-        cout << "Article ajouté avec succès !" << endl;
-
-        cout << "Voulez-vous ajouter un autre Produit ? (o/n) : ";
-        cin >> choix;
-    } while (choix == 'o' || choix == 'O');
+    int reference, prix, quantiteDisponible, emplacementRangee, emplacementEtagere;
+    char designation[100], emplacementZone[100];
 
     effacer_ecran();
+    cout << "=============================================" << endl;
+    cout << "            Ajouter un nouveau produit" << endl;
+    cout << "=============================================" << endl;
+
+    cout << "Entrez la référence du produit : ";
+    cin >> reference;
+    cin.ignore();
+    cout << "Entrez la désignation du produit : ";
+    cin.getline(designation, 100);
+    cout << "Entrez le prix du produit : ";
+    cin >> prix;
+    cout << "Entrez la quantité disponible : ";
+    cin >> quantiteDisponible;
+    cin.ignore();
+    cout << "Entrez la zone de l'emplacement : ";
+    cin.getline(emplacementZone, 100);
+    cout << "Entrez la rangée de l'emplacement : ";
+    cin >> emplacementRangee;
+    cout << "Entrez l'étagère de l'emplacement : ";
+    cin >> emplacementEtagere;
+
+    Produit nouveauProduit(reference, designation, prix, emplacementZone, emplacementRangee, emplacementEtagere, quantiteDisponible);
+    Produits.push_back(nouveauProduit);
+
+    effacer_ecran();
+    cout << "Produit ajouté avec succès." << endl;
 }
