@@ -1,27 +1,20 @@
-#ifndef EMPLACEMENT_H
-#define EMPLACEMENT_H
-
-#include <string>
-
-using namespace std;
-
 class Emplacement {
 private:
-    string zone;
+    char* zone;
     int rangee;
     int etagere;
 
 public:
-    Emplacement(const string& zone = "", int rangee = 0, int etagere = 0);
+    Emplacement(const char* z = NULL, int r = -1, int e = -1);
 
-    string getZone() const;
-    void setZone(const string& zone);
+    void afficher_emplacement() const ;
 
-    int getRangee() const;
-    void setRangee(int rangee);
+    char* getzone() const ;
+    int getrangee() const ;
+    int getetagere() const ;
 
-    int getEtagere() const;
-    void setEtagere(int etagere);
+    void setzone(char* z);
+
+    void setrangee(int r) ;
+    void setetagere(int e) ;
 };
-
-#endif // EMPLACEMENT_H
