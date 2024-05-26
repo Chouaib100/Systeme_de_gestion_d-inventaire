@@ -1,7 +1,7 @@
-#include "Trier_Produit.h"
+#include "../include/Trier_Produit.h"
 #include <algorithm>
 #include <iostream>
-#include "effacer_ecran.h"
+#include "../include/effacer_ecran.h"
 
 using namespace std;
 
