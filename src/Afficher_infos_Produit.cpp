@@ -1,4 +1,5 @@
 #include "../include/Afficher_infos_Produit.h"
+#include "../include/effacer_ecran.h"
 #include <iostream>
 #include "../include/effacer_ecran.h"
 
