@@ -3,6 +3,7 @@ private:
     char* zone;
     int rangee;
     int etagere;
+    
 
 public:
     Emplacement(const char* z = NULL, int r = -1, int e = -1);
