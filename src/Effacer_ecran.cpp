@@ -1,4 +1,4 @@
-#include "effacer_ecran.h"
+#include "../include/effacer_ecran.h"
 #include <cstdlib>
 
 using namespace std;
