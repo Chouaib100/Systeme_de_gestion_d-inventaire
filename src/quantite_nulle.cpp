@@ -1,6 +1,6 @@
-#include "quantite_nulle.h"
+#include "../include/quantite_nulle.h"
 #include <iostream>
-#include "effacer_ecran.h"
+#include "../include/effacer_ecran.h"
 
 using namespace std;
 
