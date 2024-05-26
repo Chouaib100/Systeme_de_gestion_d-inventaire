@@ -1,6 +1,7 @@
 #ifndef AFFICHER_INFOS_PRODUIT_H
 #define AFFICHER_INFOS_PRODUIT_H
 
+
 #include <vector>
 #include "Produit.h"
 
