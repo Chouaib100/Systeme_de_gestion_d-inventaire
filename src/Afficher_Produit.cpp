@@ -1,6 +1,6 @@
-#include "Afficher_Produit.h"
+#include "../include/Afficher_Produit.h"
 #include <iostream>
-#include "effacer_ecran.h"
+#include "../include/effacer_ecran.h"
 
 using namespace std;
 
