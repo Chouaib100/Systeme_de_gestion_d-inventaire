@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "Produit.h"
-#include "executer_menu.h"
+#include "../include/Produit.h"
+#include "../include/executer_menu.h"
 
 using namespace std;
 
